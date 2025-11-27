@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Contest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Interview Contest</h1>
+            <p>Пройдите собеседование с ИИ интервьюером и продемонстрируйте свои навыки</p>
+        </header>
+
+        <div class="main-content">
+            <div class="chat-section">
+                <div class="chat-header">
+                    <h2>Чат с ИИ интервьюером</h2>
+                    <div class="user-level">Уровень: <span id="user-level">Junior</span></div>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message ai-message">
+                        <div class="message-header">
+                            <span>AI Интервьюер</span>
+                            <span id="current-time">10:30</span>
+                        </div>
+                        <div class="message-content" id="welcome-message">
+                            Загрузка собеседования...
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <textarea id="user-input" placeholder="Введите ваш ответ..." disabled></textarea>
+                    <button id="send-btn" disabled>Отправить</button>
+                </div>
+            </div>
+
+            <div class="code-section">
+                <div class="code-header">
+                    <h2>Редактор кода Python</h2>
+                    <div class="code-controls">
+                        <button class="run" id="run-btn" disabled>Запустить</button>
+                        <button id="submit-btn" disabled>Отправить решение</button>
+                    </div>
+                </div>
+                <div class="code-editor-wrapper">
+                    <div class="code-editor-container">
+                        <textarea id="code-editor"># Ожидайте задание от интервьюера...</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <h3>Прогресс собеседования</h3>
+                <div class="progress-stats">
+                    <div class="stat">
+                        <div class="stat-value" id="total-score">0</div>
+                        <div class="stat-label">Общий балл</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="completed">0/5</div>
+                        <div class="stat-label">Завершено</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="questions-count">0/0</div>
+                        <div class="stat-label">Вопросы/Код</div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="questions-list" id="questions-list">
+                <!-- Индикаторы вопросов будут генерироваться динамически -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="/static/JavaScript/script.js"></script>
+</body>
+</html>
