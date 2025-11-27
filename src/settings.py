@@ -1,5 +1,5 @@
-CNT_QUESTION = 2
+CNT_QUESTION = 3
 CNT_CODES = 2
-THEME = ['ООП', 'Агоритмы']
+THEME = ['ООП', 'Агоритмы', 'Машина тьюринга']
 
 API_KEY = "sk-yNjn-wgv0sNPUdodnZ175A"
